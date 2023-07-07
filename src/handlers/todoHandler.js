@@ -26,11 +26,19 @@ class todoHandler {
         const filter = { _id: id, userId: res.locals.userId };
         try {
             let doc = await todoModel.findOne(filter);
+            if (!doc) return res.status(404).json({ error: 'Todo not found' });
             return res.status(200).json(doc);
+
         } catch (error) {
-            return res.status(404).json({ error: 'Todo not found' });
+            return res.status(500).json({ error: 'Internal server error' });
         }
     };
+
+    // Get all todo 
+    list = async (req, res) => {
+        const todos = await todoModel.find({ userId: res.locals.userId })
+        return res.json(todos);
+    }
 
     // Update a todo
     update = async (req, res) => {
