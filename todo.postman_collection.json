@@ -135,13 +135,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{base_url}}/todo/64a84062cdfe485f7dbe4723",
+					"raw": "{{base_url}}/todo",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
-						"todo",
-						"64a84062cdfe485f7dbe4723"
+						"todo"
 					]
 				}
 			},
