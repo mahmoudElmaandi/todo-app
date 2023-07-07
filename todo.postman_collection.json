@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "cdfbeca6-702b-4f49-a18a-ff46c0fbdfa1",
+		"name": "todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"mahmoud\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/getToken",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTodo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtYWhtb3VkIiwiaWF0IjoxNjg4NzQ1NDk4LCJleHAiOjE2OTA0NzM0OTh9.Ncucs-uBZOc3W-7AD2sMlyQpmG94Jdg7mAE326cOdWE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"task 1\",\n    \"description\": \"buying stuff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todo",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTodo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtYWhtb3VkIiwiaWF0IjoxNjg4NzQ1NDk4LCJleHAiOjE2OTA0NzM0OTh9.Ncucs-uBZOc3W-7AD2sMlyQpmG94Jdg7mAE326cOdWE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"task 1\",\n    \"description\": \"buying stuff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todo/64a84062cdfe485f7dbe4723",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todo",
+						"64a84062cdfe485f7dbe4723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllTodo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtYWhtb3VkIiwiaWF0IjoxNjg4NzQ1NDk4LCJleHAiOjE2OTA0NzM0OTh9.Ncucs-uBZOc3W-7AD2sMlyQpmG94Jdg7mAE326cOdWE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"task 1\",\n    \"description\": \"buying stuff\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todo/64a84062cdfe485f7dbe4723",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todo",
+						"64a84062cdfe485f7dbe4723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTodo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtYWhtb3VkIiwiaWF0IjoxNjg4NzQ1NDk4LCJleHAiOjE2OTA0NzM0OTh9.Ncucs-uBZOc3W-7AD2sMlyQpmG94Jdg7mAE326cOdWE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"task 1\",\n    \"description\": \"buying stuff\",\n    \"completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todo/64a8385b7507c58d52b158f0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todo",
+						"64a8385b7507c58d52b158f0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTodo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtYWhtb3VkIiwiaWF0IjoxNjg4NzQ1NDk4LCJleHAiOjE2OTA0NzM0OTh9.Ncucs-uBZOc3W-7AD2sMlyQpmG94Jdg7mAE326cOdWE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"task 1\",\n    \"description\": \"buying stuff\",\n    \"completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todo/64a8385b7507c58d52b158f0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todo",
+						"64a8385b7507c58d52b158f0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/api/v1"
+		}
+	]
+}
